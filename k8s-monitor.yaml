@@ -34,8 +34,10 @@ spec:
     spec:
       containers:
         - env:
+            #ckb节点地址，默认监控公共节点mainnet 环境
             - name: CKB_RPC_URL
               value: 'http://mainnet-ckb:8114'
+            #ckb节点区块抓取时间
             - name: UPDATE_INTERVAL
               value: '5'
           image: 'ghcr.io/magickbase/ckb-node-monitor:v0.0.4'
